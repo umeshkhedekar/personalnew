@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ===== CSS ===== -->
+   <link rel="stylesheet" href="style.css">
+   <!-- ===== Boxicons CSS ===== -->
+   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   <!--==== Cdn link ====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ===== Title ===== -->
+   <title>Website Planet</title>
+   <link rel="icon" href="./img/clipart1841477.png" type="image/x-icon">
+</head>
+<body>
+    <!--======= Navbar =======-->
+    <nav>
+        <div class="nav-bar">
+            <span class="logo navLogo"><a href="#" id="d"><span id="s">U-</span>k-></a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#" id="d"><span id="s">U-</span>k-></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="regi.html">Portal Links</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="login"><a href="login.html">Login</a></li>
+                </ul>
+                <div  class="icco">
+                  <a href="https://www.instagram.com/umesh.khedekar.796?igsh=MWxraWJjcW1tYmF0bQ=="><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/umesh.khedekar.796?mibextid=hIlR13"> <i class="fa-brands fa-facebook"></i></a>
+                 
+                  <i class="fa-brands fa-twitter"></i>
+                  <a href="https://wa.me/qr/EODRKGHUTJJVJ1"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <div class="search-field">
+                     <input type="text" placeholder="Search...">
+                     <i class='bx bx-search'></i>
+                 </div>
+                </div>
+            </div>
+            <i class='bx bx-menu sidebarOpen' ></i>
+        </div>
+    </nav>
+
+<!-- =========================
+         LOGIN BOX
+    ========================= -->
+
+    <section class="logi" id="logi">
+        <div class="login-box">
+
+        <h2>
+            Login <span>Me</span>
+        </h2>
+
+        <p>
+            Enter your username and password
+        </p>
+
+
+        <!-- LOGIN FORM -->
+
+        <form id="loginForm">
+
+
+            <!-- USERNAME -->
+
+            <div class="input-boxx">
+
+                <i class='bx bx-user left-icon'></i>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="input-boxx">
+
+                <i class='bx bx-lock-alt left-icon'></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <i
+                    class='bx bx-show show-password'
+                    id="showPassword">
+                </i>
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Login
+            </button>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div
+                class="message"
+                id="message">
+            </div>
+
+
+        </form>
+
+
+        <!-- REGISTER -->
+
+        <div class="register">
+
+            Don't have an account?
+
+            <a href="#">
+                Register
+            </a>
+
+        </div>
+
+
+    </div>
+    </section>
+<script>
+
+
+
+
+        /* =========================
+           SHOW / HIDE PASSWORD
+        ========================= */
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+
+        showPassword.addEventListener("click", function () {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+
+                showPassword.classList.remove("bx-show");
+
+                showPassword.classList.add("bx-hide");
+
+            } else {
+
+                passwordInput.type = "password";
+
+                showPassword.classList.remove("bx-hide");
+
+                showPassword.classList.add("bx-show");
+
+            }
+
+        });
+     
+      
+
+        /* =========================
+           LOGIN
+        ========================= */
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+
+        loginForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const username =
+                document.getElementById("username").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+
+            const message =
+                document.getElementById("message");
+
+
+            /* =========================
+               CHANGE LOGIN DETAILS HERE
+            ========================= */
+
+            const correctUsername = "umesh";
+
+            const correctPassword = "12345";
+
+
+            /* =========================
+               CORRECT LOGIN
+            ========================= */
+
+            if (
+                username === correctUsername &&
+                password === correctPassword
+            ) {
+
+                /*
+                   Correct username/password
+                   Open next HTML page
+                */
+
+                window.location.href = "home.html";
+
+            }
+
+
+            /* =========================
+               WRONG LOGIN
+            ========================= */
+
+            else {
+
+                message.innerHTML =
+                    "Wrong username or password";
+
+                message.style.color = "red";
+
+                message.style.display = "block";
+
+            }
+
+        });
+
+    
+    </script>
+
+</body>
+<script src="index.js"></script>
+</html>

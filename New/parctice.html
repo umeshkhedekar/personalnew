@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+
+    <!-- Boxicons -->
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 30px;
+        }
+
+        /* =========================
+           LARGE LOGIN BOX
+        ========================= */
+
+        .login-box {
+            width: 550px;
+            min-height: 550px;
+            background: #ffffff;
+            padding: 55px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .login-box h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222;
+            margin-bottom: 12px;
+        }
+
+        .login-box h2 span {
+            color: #ffb800;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           INPUT BOX
+        ========================= */
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 58px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+
+            padding-left: 52px;
+            padding-right: 52px;
+
+            font-size: 16px;
+            color: #333;
+
+            transition: 0.3s;
+        }
+
+        .input-box input:focus {
+            border-color: #ffb800;
+            box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.12);
+        }
+
+
+        /* =========================
+           LEFT ICON
+        ========================= */
+
+        .left-icon {
+            position: absolute;
+            left: 17px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 23px;
+            color: #ffb800;
+        }
+
+
+        /* =========================
+           SHOW PASSWORD
+        ========================= */
+
+        .show-password {
+            position: absolute;
+            right: 17px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 23px;
+            color: #777;
+
+            cursor: pointer;
+        }
+
+        .show-password:hover {
+            color: #ffb800;
+        }
+
+
+        /* =========================
+           LOGIN BUTTON
+        ========================= */
+
+        .login-btn {
+            width: 100%;
+            height: 58px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #ffb800;
+            color: #ffffff;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #e5a600;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           ERROR MESSAGE
+        ========================= */
+
+        .message {
+            display: none;
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           REGISTER
+        ========================= */
+
+        .register {
+            text-align: center;
+
+            margin-top: 28px;
+
+            font-size: 15px;
+
+            color: #777;
+        }
+
+        .register a {
+            color: #ffb800;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .login-box {
+                width: 100%;
+                min-height: auto;
+
+                padding: 35px 25px;
+
+                border-radius: 15px;
+            }
+
+            .login-box h2 {
+                font-size: 30px;
+            }
+
+            .login-box p {
+                font-size: 14px;
+                margin-bottom: 28px;
+            }
+
+            .input-box input {
+                height: 52px;
+                font-size: 14px;
+            }
+
+            .login-btn {
+                height: 52px;
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         LOGIN BOX
+    ========================= -->
+
+    <div class="login-box">
+
+        <h2>
+            Login <span>Me</span>
+        </h2>
+
+        <p>
+            Enter your username and password
+        </p>
+
+
+        <!-- LOGIN FORM -->
+
+        <form id="loginForm">
+
+
+            <!-- USERNAME -->
+
+            <div class="input-box">
+
+                <i class='bx bx-user left-icon'></i>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="input-box">
+
+                <i class='bx bx-lock-alt left-icon'></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <i
+                    class='bx bx-show show-password'
+                    id="showPassword">
+                </i>
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Login
+            </button>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div
+                class="message"
+                id="message">
+            </div>
+
+
+        </form>
+
+
+        <!-- REGISTER -->
+
+        <div class="register">
+
+            Don't have an account?
+
+            <a href="#">
+                Register
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           SHOW / HIDE PASSWORD
+        ========================= */
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+
+        showPassword.addEventListener("click", function () {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+
+                showPassword.classList.remove("bx-show");
+
+                showPassword.classList.add("bx-hide");
+
+            } else {
+
+                passwordInput.type = "password";
+
+                showPassword.classList.remove("bx-hide");
+
+                showPassword.classList.add("bx-show");
+
+            }
+
+        });
+
+
+        /* =========================
+           LOGIN
+        ========================= */
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+
+        loginForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const username =
+                document.getElementById("username").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+
+            const message =
+                document.getElementById("message");
+
+
+            /* =========================
+               CHANGE LOGIN DETAILS HERE
+            ========================= */
+
+            const correctUsername = "umesh";
+
+            const correctPassword = "12345";
+
+
+            /* =========================
+               CORRECT LOGIN
+            ========================= */
+
+            if (
+                username === correctUsername &&
+                password === correctPassword
+            ) {
+
+                /*
+                   Correct username/password
+                   Open next HTML page
+                */
+
+                window.location.href = "home.html";
+
+            }
+
+
+            /* =========================
+               WRONG LOGIN
+            ========================= */
+
+            else {
+
+                message.innerHTML =
+                    "Wrong username or password";
+
+                message.style.color = "red";
+
+                message.style.display = "block";
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+</html>
