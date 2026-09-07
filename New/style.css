@@ -1393,7 +1393,9 @@ body.dark .firstt img{
               position: relative;
               margin-top: 100px;
               margin-left: -40px;
+                min-height: 200vh;
             }
+           
 
             .contact-container {
                 grid-template-columns: 1fr;
@@ -1408,7 +1410,9 @@ body.dark .firstt img{
                 padding: 10px 20px;
                 margin-left:0px;
               
-               
+            }
+            body.dark .contact{
+                background: none;
             }
 
             .contact-title h2 {
@@ -1490,6 +1494,13 @@ body.dark .contact-box span {
 
         .logi{
             position: fixed;
+             background: linear-gradient(to bottom, #fff 40%, #eeca5e 130%);
+             width: 100%;
+             margin-top: 10px;
+             height: 100%;
+        }
+        body.dark .logi{
+            background: linear-gradient(to bottom, #000 40%, #eeca5e 130%);
         }
 
         .login-box {
@@ -1686,9 +1697,12 @@ body.dark .contact-box span {
         @media (max-width: 600px) {
 
             body {
-                padding: 20px;
+                padding: 0px;
             }
-
+            
+            body.dark .logi{
+                background: none;
+            }
             .login-box {
                 width: 100%;
                 min-height: auto;
