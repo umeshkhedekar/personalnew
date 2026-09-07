@@ -559,9 +559,11 @@ body.dark .name p{
 @media (max-width: 790px) {
 .firstt{
     display: table;
-    margin-left:10px;
+    margin-left:30px;
+   
     text-align:none;
     margin-top:110px;
+    width:90%;
 }
 .name{
     margin-left:-10px;
@@ -580,7 +582,7 @@ body.dark .firstt img{
 }
 .home{
     height:762px;
-    width:100%;
+    width:105%;
    background: linear-gradient(to bottom, #ffffff 23%, #FFBF00 180%); 
     margin-top:-5px;
 }
