@@ -1730,3 +1730,92 @@ body.dark .contact-box span {
             }
 
         }
+
+
+
+/* Section */
+.online {
+    width:100%;
+    padding: 50px 30px;
+    margin-top: 50px;
+}
+
+/* Cards container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    /* 3 cards in one row */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+/* Individual card */
+.content {
+    background: #ffbd00;
+    padding: 30px;
+
+    min-height:0px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.content h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.content p {
+    margin-bottom: 10px;
+}
+
+/* Button / Link */
+.content .btn {
+    display: inline-block;
+
+    color: blue;
+    font-size: 18px;
+
+    text-decoration: underline;
+}
+
+/* Hover */
+.content .btn:hover {
+    color: darkblue;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .online {
+        padding: 30px 15px;
+        margin-top:60px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .content h2 {
+        font-size: 21px;
+    }
+
+}
