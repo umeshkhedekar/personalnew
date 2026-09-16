@@ -706,7 +706,7 @@ body.dark .firstt img{
             position: relative;
             min-height:50px;
             padding: 10px 10px;
-            background: none;
+          
             border: 1px solid #1f2937;
             border-radius: 18px;
             overflow: hidden;
@@ -753,16 +753,19 @@ body.dark .firstt img{
             border-radius: 15px;
             margin-bottom: 25px;
             transition: 0.4s;
+           margin-left: 130px;
         }
 
         .service-icon i {
             font-size:15px;
             color:#FFBF00;
+           
         }
 
         .service-card:hover .service-icon {
             background: #FFBF00;
             transform: rotateY(180deg);
+            
         }
 
         .service-card:hover .service-icon i {
@@ -774,6 +777,7 @@ body.dark .firstt img{
         .service-card h3 {
             font-size: 23px;
             margin-bottom: 15px;
+            margin-left:80px;
         }
         body.dark .service-card h3 {
             color: #fffdfd;
@@ -799,6 +803,7 @@ body.dark .firstt img{
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
+             margin-left: 100px;
         }
 
         .service-btn i {
@@ -812,6 +817,7 @@ body.dark .firstt img{
 
         .service-btn:hover i {
             transform: translateX(6px);
+             
         }
 
         /* ===== TABLET ===== */
